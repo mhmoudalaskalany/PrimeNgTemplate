@@ -1,0 +1,14 @@
+<h1>
+  Welcome Home
+</h1>
+
+<h5>Single Selection</h5>
+<p-tree [value]="data1" selectionMode="single" [(selection)]="selectedNodes1" (onNodeSelect)="nodeSelect($event)"
+  (onNodeUnselect)="nodeUnselect($event)"></p-tree>
+
+
+<h5>Multiple Selection with Checkbox</h5>
+<p-tree [value]="data3" selectionMode="checkbox" (onNodeSelect)="nodeSelect($event)"
+  (onNodeUnselect)="nodeUnselect($event)" [(selection)]="selectedNodes3" (onFilter)="setNewArray($event)" [filter]="true"
+  filterMode="strict">
+</p-tree>
